@@ -1,0 +1,378 @@
+{
+	"asset": {
+		"generator": "Unity 2020.3.11f1",
+		"extras": {
+			"exporterVersion" : "2.2.1"
+		},
+		"version": "2.0"
+	},
+	"accessors": [
+		{
+			"bufferView": 3,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 513,
+			"max": [ 0.195453, 2.933869, 0.1858868 ],
+			"min": [ -0.195453, 0, -0.1858868 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 6156,
+			"componentType": 5126,
+			"count": 513,
+			"max": [ 0.9581528, 1, 1 ],
+			"min": [ -0.9581522, -1, -1 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 2,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 513,
+			"max": [ 0.9836308, 0.5079175 ],
+			"min": [ 0.3229955, 0.02932495 ],
+			"type": "VEC2"
+		},
+		{
+			"bufferView": 4,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 513,
+			"max": [ 1, 0.6928031, 0.974192, 1 ],
+			"min": [ -1, -0.6928031, -0.974192, -1 ],
+			"type": "VEC4"
+		},
+		{
+			"bufferView": 0,
+			"byteOffset": 0,
+			"componentType": 5123,
+			"count": 990,
+			"max": [ 512 ],
+			"min": [ 0 ],
+			"type": "SCALAR"
+		},
+		{
+			"bufferView": 1,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 40,
+			"max": [ 1.3 ],
+			"min": [ 0 ],
+			"type": "SCALAR"
+		},
+		{
+			"bufferView": 5,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 40,
+			"max": [ -1.285939E-08, 1.999164, 0.001229406 ],
+			"min": [ -1.285939E-08, 1.999164, 0.001229406 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 6,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 40,
+			"max": [ 0, 0, 0, -1 ],
+			"min": [ 0, 0, 0, -1 ],
+			"type": "VEC4"
+		},
+		{
+			"bufferView": 5,
+			"byteOffset": 480,
+			"componentType": 5126,
+			"count": 40,
+			"max": [ 1, 1.219663, 1 ],
+			"min": [ 1, 1, 1 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 12312,
+			"componentType": 5126,
+			"count": 8,
+			"max": [ 0.1072844, 0.6736296, 0.1105621 ],
+			"min": [ -0.1072844, -0.02056519, -0.1105621 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 12408,
+			"componentType": 5126,
+			"count": 8,
+			"max": [ 0, -0.0009711541, 0.9999422 ],
+			"min": [ -0.995917, -0.01075797, 0.09026776 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 2,
+			"byteOffset": 4104,
+			"componentType": 5126,
+			"count": 8,
+			"max": [ 0.9644191, 0.4715567 ],
+			"min": [ 0.2653987, 0.3441342 ],
+			"type": "VEC2"
+		},
+		{
+			"bufferView": 4,
+			"byteOffset": 8208,
+			"componentType": 5126,
+			"count": 8,
+			"max": [ 0, 0.9999422, 0.01075805, 1 ],
+			"min": [ 0, 0.9999422, 0.01075797, 1 ],
+			"type": "VEC4"
+		},
+		{
+			"bufferView": 0,
+			"byteOffset": 1980,
+			"componentType": 5123,
+			"count": 12,
+			"max": [ 7 ],
+			"min": [ 0 ],
+			"type": "SCALAR"
+		}
+	],
+	"animations": [
+		{
+			"name": "Torch_Art",
+			"channels": [
+				{
+					"sampler": 0,
+					"target": {
+						"node": 2,
+						"path": "translation"
+					}
+				},
+				{
+					"sampler": 1,
+					"target": {
+						"node": 2,
+						"path": "rotation"
+					}
+				},
+				{
+					"sampler": 2,
+					"target": {
+						"node": 2,
+						"path": "scale"
+					}
+				}
+			],
+			"samplers": [
+				{
+					"input": 5,
+					"interpolation": "LINEAR",
+					"output": 6
+				},
+				{
+					"input": 5,
+					"interpolation": "LINEAR",
+					"output": 7
+				},
+				{
+					"input": 5,
+					"interpolation": "LINEAR",
+					"output": 8
+				}
+			]
+		}
+	],
+	"buffers": [
+		{
+			"byteLength": 28772,
+			"uri": "entity15404.bin"
+		}
+	],
+	"bufferViews": [
+		{
+			"buffer": 0,
+			"byteLength": 2004,
+			"target": 34963,
+			"byteOffset": 25168
+		},
+		{
+			"buffer": 0,
+			"byteLength": 160,
+			"byteOffset": 0
+		},
+		{
+			"buffer": 0,
+			"byteLength": 4168,
+			"target": 34962,
+			"byteStride": 8,
+			"byteOffset": 160
+		},
+		{
+			"buffer": 0,
+			"byteLength": 12504,
+			"target": 34962,
+			"byteStride": 12,
+			"byteOffset": 4328
+		},
+		{
+			"buffer": 0,
+			"byteLength": 8336,
+			"target": 34962,
+			"byteStride": 16,
+			"byteOffset": 16832
+		},
+		{
+			"buffer": 0,
+			"byteLength": 960,
+			"byteStride": 12,
+			"byteOffset": 27172
+		},
+		{
+			"buffer": 0,
+			"byteLength": 640,
+			"byteStride": 16,
+			"byteOffset": 28132
+		}
+	],
+	"images": [
+		{
+			"uri": "Assets/Visuals/Materials/Textures/Trim_2_2D_View.png"
+		},
+		{
+			"uri": "Assets/Visuals/Materials/Textures/Trim_2_Emissive.jpg"
+		},
+		{
+			"uri": "Assets/Visuals/Materials/Textures/TrimFX_Albedo.png"
+		},
+		{
+			"uri": "Assets/Visuals/Materials/Textures/TrimFX_Emissive.jpg"
+		}
+	],
+	"materials": [
+		{
+			"pbrMetallicRoughness": {
+				"baseColorTexture" : {
+					"index" : 0,
+					"texCoord" : 0
+				},
+				"baseColorFactor": [0.3349057, 0.9425228, 1, 1],
+				"metallicFactor": 0,
+				"roughnessFactor": 0.5
+			},
+			"emissiveTexture" : {
+				"index" : 1,
+				"texCoord" : 0
+			},
+			"emissiveFactor": [0.8867924, 0.4643111, 0.5675842],
+			"doubleSided": false,
+			"name": "Trim_02_Mat"
+		},
+		{
+			"pbrMetallicRoughness": {
+				"baseColorTexture" : {
+					"index" : 2,
+					"texCoord" : 0
+				},
+				"baseColorFactor": [1, 1, 1, 1],
+				"metallicFactor": 0,
+				"roughnessFactor": 0.5
+			},
+			"alphaMode": "BLEND",
+			"alphaCutoff": 0.5,
+			"emissiveTexture" : {
+				"index" : 3,
+				"texCoord" : 0
+			},
+			"emissiveFactor": [2, 2, 2],
+			"doubleSided": true,
+			"name": "TrimFX_Mat"
+		}
+	],
+	"meshes": [
+		{
+			"name": "mesh_torch_18774Torch_Art",
+			"primitives": [
+				{
+					"attributes": {
+						"POSITION": 0,
+						"NORMAL": 1,
+						"TEXCOORD_0": 2,
+						"TANGENT": 3
+					},
+					"indices": 4,
+					"material": 0,
+					"mode": 4
+				}
+			]
+		},
+		{
+			"name": "mesh_pPlane2_18782pPlane2",
+			"primitives": [
+				{
+					"attributes": {
+						"POSITION": 9,
+						"NORMAL": 10,
+						"TEXCOORD_0": 11,
+						"TANGENT": 12
+					},
+					"indices": 13,
+					"material": 1,
+					"mode": 4
+				}
+			]
+		}
+	],
+	"nodes": [
+		{
+			"name": "UnityGlTF_root",
+			"children": [
+				1
+			]
+		},
+		{
+			"name": "node_Torch_Art",
+			"mesh": 0,
+			"children": [
+				2
+			],
+			"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+		},
+		{
+			"name": "node_pPlane2",
+			"mesh": 1,
+			"translation": [ -1.285939E-08, 1.999164, 0.001229406]
+		}
+	],
+	"samplers": [
+		{
+			"magFilter": 9729,
+			"minFilter": 9985,
+			"wrapS": 10497,
+			"wrapT": 10497
+		}
+	],
+	"scenes": [
+		{
+			"name":"defaultScene",
+			"nodes": [
+				0
+			]
+		}
+	],
+	"scene": 0,
+	"textures": [
+		{
+			"sampler": 0,
+			"source": 0
+		},
+		{
+			"sampler": 0,
+			"source": 1
+		},
+		{
+			"sampler": 0,
+			"source": 2
+		},
+		{
+			"sampler": 0,
+			"source": 3
+		}
+	]
+}

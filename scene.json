@@ -1,0 +1,64 @@
+{
+  "display": {
+    "title": "World Stage",
+    "description": "Interational shows",
+    "navmapThumbnail": "assets/thumbnail.jpg",
+    "favicon": "favicon_asset"
+  },
+  "contact": {
+    "name": "Person",
+    "email": "Email"
+  },
+  "owner": "ETH Address",
+  "spawnPoints": [
+    {
+      "name": "spawn1",
+      "default": true,
+      "position": {
+        "x": 70,
+        "y": 1,
+        "z": 30
+      },
+      "cameraTarget": {
+        "x": 0,
+        "y": 1,
+        "z": 16
+      }
+    }
+  ],
+  "communications": {
+    "type": "webrtc",
+    "signalling": "https://signalling-01.decentraland.org"
+  },
+  "policy": {
+    "contentRating": "E",
+    "fly": true,
+    "voiceEnabled": true,
+    "blacklist": [],
+    "teleportPosition": ""
+  },
+  "requiredPermissions": [],
+  "main": "bin/game.js",
+  "tags": [],
+  "scene": {
+    "parcels": [
+      "-63,84",
+      "-63,85",
+      "-63,86",
+      "-63,87",
+      "-62,84",
+      "-62,85",
+      "-62,86",
+      "-62,87",
+      "-61,84",
+      "-61,85",
+      "-61,86",
+      "-61,87",
+      "-60,84",
+      "-60,85",
+      "-60,86",
+      "-60,87"
+    ],
+    "base": "-63,84"
+  }
+}

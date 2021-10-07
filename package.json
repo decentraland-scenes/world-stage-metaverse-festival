@@ -12,9 +12,7 @@
   },
   "dependencies": {
     "@dcl/ui-scene-utils": "^1.8.1",
-    "decentraland-builder-scripts": "^0.24.0",
-    "decentraland-ecs-utils": "latest",
-    "eth-connect": "^6.0.0"
+    "decentraland-ecs-utils": "latest"
   },
   "devDependencies": {
     "decentraland-ecs": "^6.6.8"

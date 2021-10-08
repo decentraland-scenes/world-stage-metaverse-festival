@@ -287,7 +287,7 @@
 	],
 	"meshes": [
 		{
-			"name": "mesh_torch_18774Torch_Art",
+			"name": "mesh_torch_18086Torch_Art",
 			"primitives": [
 				{
 					"attributes": {
@@ -303,7 +303,7 @@
 			]
 		},
 		{
-			"name": "mesh_pPlane2_18782pPlane2",
+			"name": "mesh_pPlane2_18094pPlane2",
 			"primitives": [
 				{
 					"attributes": {

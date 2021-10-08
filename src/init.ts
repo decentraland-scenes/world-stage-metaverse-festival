@@ -48,26 +48,7 @@ function loadSignPanel(address:string, name:string) {
 }
 
 
-var StreamPlane = new Entity("StreamPlane")
-engine.addEntity(StreamPlane)
-StreamPlane.addComponent(new Transform({ position: new Vector3(7.94, 13.04, 31.58144) }))
-StreamPlane.getComponent(Transform).rotation.set(0, 0.7071068, 0, 0.7071068)
-StreamPlane.getComponent(Transform).scale.set(19.2, 10.8, 1)
-StreamPlane.addComponent(new PlaneShape())
-StreamPlane.getComponent(PlaneShape).withCollisions = true
 
-const Stream1 = new VideoClip("assets/Clouds_World.mp4")
-const Stream1Texture = new VideoTexture(Stream1)
-const StreamMat = new Material()
-StreamMat.albedoTexture = Stream1Texture
-StreamMat.emissiveTexture = Stream1Texture
-StreamMat.emissiveIntensity = 2
-StreamMat.emissiveColor =  new Color3 (0.5,0.5,0.5)
-StreamMat.roughness = 0
-StreamPlane.addComponent(StreamMat)
-Stream1Texture.playing = true
-Stream1Texture.loop = true
-Stream1Texture.volume = 0
 
 
 

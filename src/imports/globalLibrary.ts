@@ -63,5 +63,5 @@ function getMeshShapeComponent(entity: IEntity){
 }
 
 function console_log(...args: any[]){
-  console.log(...args)
+  log(...args)
 }

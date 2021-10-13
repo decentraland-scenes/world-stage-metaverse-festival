@@ -1,37 +1,16 @@
 {
- "display": {
-    "title": "Land Title",
-	"description": "Land Info",
-	"navmapThumbnail": "assets/thumbnail.jpg",
+  "display": {
+    "title": "World Stage",
+    "description": "Interational shows",
+    "navmapThumbnail": "assets/thumbnail.jpg",
     "favicon": "favicon_asset"
-   },
+  },
   "contact": {
     "name": "Person",
     "email": "Email"
   },
   "owner": "ETH Address",
-  "scene": {
-    "parcels": [
-      "16,39",
-      "16,40",
-      "16,41",
-      "16,42",
-      "17,39",
-      "17,40",
-      "17,41",
-      "17,42",
-      "18,39",
-      "18,40",
-      "18,41",
-      "18,42",
-      "19,39",
-      "19,40",
-      "19,41",
-      "19,42"
-    ],
-    "base": "16,39"
-  },
-    "spawnPoints": [
+  "spawnPoints": [
     {
       "name": "spawn1",
       "default": true,
@@ -47,7 +26,6 @@
       }
     }
   ],
-
   "communications": {
     "type": "webrtc",
     "signalling": "https://signalling-01.decentraland.org"
@@ -59,9 +37,28 @@
     "blacklist": [],
     "teleportPosition": ""
   },
-  "requiredPermissions": [
-    
-  ],
+  "requiredPermissions": [],
   "main": "bin/game.js",
-  "tags": []
+  "tags": [],
+  "scene": {
+    "parcels": [
+      "-63,84",
+      "-63,85",
+      "-63,86",
+      "-63,87",
+      "-62,84",
+      "-62,85",
+      "-62,86",
+      "-62,87",
+      "-61,84",
+      "-61,85",
+      "-61,86",
+      "-61,87",
+      "-60,84",
+      "-60,85",
+      "-60,86",
+      "-60,87"
+    ],
+    "base": "-63,84"
+  }
 }

@@ -1,9 +1,7 @@
 import { Poap } from './imports/index'
-import { TagComponent } from './imports/index'
+import { createDanceAreas } from './modules/createDanceAreas'
 
 var entity16362 = new Entity('Main Camera')
-entity16362.addComponent(new TagComponent())
-entity16362.getComponent(TagComponent).tag = 'MainCamera'
 engine.addEntity(entity16362)
 entity16362.addComponent(new Transform({ position: new Vector3(0, 1, -10) }))
 entity16362.getComponent(Transform).rotation.set(0, 0, 0, 1)
@@ -357,3 +355,5 @@ entity15410
   .rotation.set(-0.1726969, -0.9794129, -0.1029404, 0.01815116)
 entity15410.getComponent(Transform).scale.set(1.07975, 1.001554, 1.044023)
 entity15410.addComponent(new GLTFShape('assets/glb_assets/FireWork.glb'))
+
+createDanceAreas()

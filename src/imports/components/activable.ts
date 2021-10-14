@@ -1,5 +1,3 @@
-import { getUserAccount } from '@decentraland/EthereumController'
-
 import { hasPoap } from './poap'
 
 export enum ActivableAction {

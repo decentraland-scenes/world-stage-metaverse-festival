@@ -2,7 +2,7 @@ import { getUserData, UserData } from '@decentraland/Identity'
 //import { getCurrentRealm, Realm } from '@decentraland/EnvironmentAPI'
 //import * as EthereumController from '@decentraland/EthereumController'
 import * as ui from '@dcl/ui-scene-utils'
-import { clearDelay, delay } from '../delay'
+
 //import { PlayCloseSound, PlayCoinSound, PlayOpenSound } from './sounds'
 
 //export let ethController = EthereumController
@@ -298,13 +298,13 @@ export class Dispenser extends Entity {
 
     anim.getClip('Action_POAP').play()
 
-    if (this.timeout) {
-      clearDelay(this.timeout)
-    }
-    this.timeout = delay(() => {
-      this.timeout = null
-      anim.getClip('Action_POAP').stop()
-      anim.getClip('Idle_POAP').play()
-    }, 4000)
+    // if (this.timeout) {
+    //   clearDelay(this.timeout)
+    // }
+    // this.timeout = utils.setTimeout(() => {
+    //   this.timeout = null
+    //   anim.getClip('Action_POAP').stop()
+    //   anim.getClip('Idle_POAP').play()
+    // }, 4000)
   }
 }

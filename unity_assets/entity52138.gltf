@@ -1145,7 +1145,7 @@
 	"buffers": [
 		{
 			"byteLength": 238928,
-			"uri": "entity15700.bin"
+			"uri": "entity52138.bin"
 		}
 	],
 	"bufferViews": [
@@ -1250,7 +1250,7 @@
 	],
 	"meshes": [
 		{
-			"name": "mesh_Flamingo_anim_1_18024flamingoV1_Art",
+			"name": "mesh_Flamingo_anim_1_18328flamingoV1_Art",
 			"primitives": [
 				{
 					"attributes": {
@@ -1266,7 +1266,7 @@
 			]
 		},
 		{
-			"name": "mesh_Flamino_18062Flamino",
+			"name": "mesh_Flamino_18366Flamino",
 			"primitives": [
 				{
 					"attributes": {
@@ -1284,7 +1284,7 @@
 			]
 		},
 		{
-			"name": "mesh_Flamino_outline_18042Flamino_outline",
+			"name": "mesh_Flamino_outline_18346Flamino_outline",
 			"primitives": [
 				{
 					"attributes": {
@@ -1516,7 +1516,7 @@
 				11,
 				12
 			],
-			"name": "Root_skeleton_Flamino-1824"
+			"name": "Root_skeleton_Flamino-53022"
 		},
 		{
 			"inverseBindMatrices": 72,
@@ -1541,7 +1541,7 @@
 				11,
 				12
 			],
-			"name": "Root_skeleton_Flamino_outline-1828"
+			"name": "Root_skeleton_Flamino_outline-53026"
 		}
 	],
 	"textures": [

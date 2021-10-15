@@ -2135,7 +2135,7 @@
 	"buffers": [
 		{
 			"byteLength": 3173858,
-			"uri": "entity3030n.bin"
+			"uri": "entity53186.bin"
 		}
 	],
 	"bufferViews": [
@@ -2243,16 +2243,6 @@
 		},
 		{
 			"pbrMetallicRoughness": {
-				"baseColorFactor": [0, 0.5748239, 0.6415094, 1],
-				"metallicFactor": 0,
-				"roughnessFactor": 0.5
-			},
-			"emissiveFactor": [0, 0.5288915, 0.6509434],
-			"doubleSided": false,
-			"name": "Blue_Emissive_Mat"
-		},
-		{
-			"pbrMetallicRoughness": {
 				"baseColorTexture" : {
 					"index" : 1,
 					"texCoord" : 0
@@ -2331,11 +2321,21 @@
 			"emissiveFactor": [0.1184689, 0.06666666, 0.2117647],
 			"doubleSided": false,
 			"name": "Flamingo_Mat"
+		},
+		{
+			"pbrMetallicRoughness": {
+				"baseColorFactor": [0, 0.5748239, 0.6415094, 1],
+				"metallicFactor": 0,
+				"roughnessFactor": 0.5
+			},
+			"emissiveFactor": [0, 0.5288915, 0.6509434],
+			"doubleSided": false,
+			"name": "Blue_Emissive_Mat"
 		}
 	],
 	"meshes": [
 		{
-			"name": "mesh_Root_Earth_19784AnimEarth",
+			"name": "mesh_Root_Earth_20008AnimEarth",
 			"primitives": [
 				{
 					"attributes": {
@@ -2351,7 +2351,7 @@
 			]
 		},
 		{
-			"name": "mesh_Cloud_19828Cloud",
+			"name": "mesh_Cloud_20056Cloud",
 			"primitives": [
 				{
 					"attributes": {
@@ -2367,7 +2367,7 @@
 			]
 		},
 		{
-			"name": "mesh_Cloud4_19854Cloud4",
+			"name": "mesh_Cloud4_20086Cloud4",
 			"primitives": [
 				{
 					"attributes": {
@@ -2383,7 +2383,7 @@
 			]
 		},
 		{
-			"name": "mesh_cloud_Outline2_21638cloud_Outline2",
+			"name": "mesh_cloud_Outline2_20092cloud_Outline2",
 			"primitives": [
 				{
 					"attributes": {
@@ -2393,13 +2393,13 @@
 						"TANGENT": 82
 					},
 					"indices": 83,
-					"material": 2,
+					"material": 1,
 					"mode": 4
 				}
 			]
 		},
 		{
-			"name": "mesh_Cloud5_19852Cloud5",
+			"name": "mesh_Cloud5_20084Cloud5",
 			"primitives": [
 				{
 					"attributes": {
@@ -2415,7 +2415,7 @@
 			]
 		},
 		{
-			"name": "mesh_Cloud6_19830Cloud6",
+			"name": "mesh_Cloud6_20058Cloud6",
 			"primitives": [
 				{
 					"attributes": {
@@ -2431,7 +2431,7 @@
 			]
 		},
 		{
-			"name": "mesh_Cloud7_19846Cloud7",
+			"name": "mesh_Cloud7_20080Cloud7",
 			"primitives": [
 				{
 					"attributes": {
@@ -2447,7 +2447,7 @@
 			]
 		},
 		{
-			"name": "mesh_Cloud9_19834Cloud9",
+			"name": "mesh_Cloud9_20064Cloud9",
 			"primitives": [
 				{
 					"attributes": {
@@ -2463,7 +2463,7 @@
 			]
 		},
 		{
-			"name": "mesh_cloud_Outline1_21640cloud_Outline1",
+			"name": "mesh_cloud_Outline1_20090cloud_Outline1",
 			"primitives": [
 				{
 					"attributes": {
@@ -2473,13 +2473,13 @@
 						"TANGENT": 107
 					},
 					"indices": 108,
-					"material": 2,
+					"material": 1,
 					"mode": 4
 				}
 			]
 		},
 		{
-			"name": "mesh_Cloud10_19822Cloud10",
+			"name": "mesh_Cloud10_20052Cloud10",
 			"primitives": [
 				{
 					"attributes": {
@@ -2495,7 +2495,7 @@
 			]
 		},
 		{
-			"name": "mesh_Cloud_Outline1_21604Cloud_Outline1",
+			"name": "mesh_Cloud_Outline1_20076Cloud_Outline1",
 			"primitives": [
 				{
 					"attributes": {
@@ -2505,13 +2505,13 @@
 						"TANGENT": 117
 					},
 					"indices": 118,
-					"material": 2,
+					"material": 1,
 					"mode": 4
 				}
 			]
 		},
 		{
-			"name": "mesh_Cloud_Outline2_21600Cloud_Outline2",
+			"name": "mesh_Cloud_Outline2_20070Cloud_Outline2",
 			"primitives": [
 				{
 					"attributes": {
@@ -2521,13 +2521,13 @@
 						"TANGENT": 122
 					},
 					"indices": 123,
-					"material": 2,
+					"material": 1,
 					"mode": 4
 				}
 			]
 		},
 		{
-			"name": "mesh_Cloud_Outline3_21606Cloud_Outline3",
+			"name": "mesh_Cloud_Outline3_20078Cloud_Outline3",
 			"primitives": [
 				{
 					"attributes": {
@@ -2537,13 +2537,13 @@
 						"TANGENT": 127
 					},
 					"indices": 128,
-					"material": 2,
+					"material": 1,
 					"mode": 4
 				}
 			]
 		},
 		{
-			"name": "mesh_Cloud_Outline4_21602Cloud_Outline4",
+			"name": "mesh_Cloud_Outline4_20074Cloud_Outline4",
 			"primitives": [
 				{
 					"attributes": {
@@ -2553,13 +2553,13 @@
 						"TANGENT": 132
 					},
 					"indices": 133,
-					"material": 2,
+					"material": 1,
 					"mode": 4
 				}
 			]
 		},
 		{
-			"name": "mesh_Cloud_Outline5_21598Cloud_Outline5",
+			"name": "mesh_Cloud_Outline5_20050Cloud_Outline5",
 			"primitives": [
 				{
 					"attributes": {
@@ -2569,13 +2569,13 @@
 						"TANGENT": 137
 					},
 					"indices": 138,
-					"material": 2,
+					"material": 1,
 					"mode": 4
 				}
 			]
 		},
 		{
-			"name": "mesh_Earth_Part_19832Earth_Part",
+			"name": "mesh_Earth_Part_20062Earth_Part",
 			"primitives": [
 				{
 					"attributes": {
@@ -2596,13 +2596,13 @@
 						"TANGENT": 142
 					},
 					"indices": 144,
-					"material": 3,
+					"material": 2,
 					"mode": 4
 				}
 			]
 		},
 		{
-			"name": "mesh_Earth_Water_19826Earth_Water",
+			"name": "mesh_Earth_Water_20054Earth_Water",
 			"primitives": [
 				{
 					"attributes": {
@@ -2612,13 +2612,13 @@
 						"TANGENT": 148
 					},
 					"indices": 149,
-					"material": 4,
+					"material": 3,
 					"mode": 4
 				}
 			]
 		},
 		{
-			"name": "mesh_Monuments_19860Monuments",
+			"name": "mesh_Monuments_20096Monuments",
 			"primitives": [
 				{
 					"attributes": {
@@ -2628,7 +2628,7 @@
 						"TANGENT": 153
 					},
 					"indices": 154,
-					"material": 5,
+					"material": 4,
 					"mode": 4
 				},
 				{
@@ -2639,13 +2639,13 @@
 						"TANGENT": 153
 					},
 					"indices": 155,
-					"material": 6,
+					"material": 5,
 					"mode": 4
 				}
 			]
 		},
 		{
-			"name": "mesh_Monuments_Outline_20320Monuments_Outline",
+			"name": "mesh_Monuments_Outline_20094Monuments_Outline",
 			"primitives": [
 				{
 					"attributes": {
@@ -2655,13 +2655,13 @@
 						"TANGENT": 159
 					},
 					"indices": 160,
-					"material": 2,
+					"material": 6,
 					"mode": 4
 				}
 			]
 		},
 		{
-			"name": "mesh_plane_19820plane",
+			"name": "mesh_plane_20048plane",
 			"primitives": [
 				{
 					"attributes": {
@@ -2671,13 +2671,13 @@
 						"TANGENT": 164
 					},
 					"indices": 165,
-					"material": 5,
+					"material": 4,
 					"mode": 4
 				}
 			]
 		},
 		{
-			"name": "mesh_plane_outline_19862plane_outline",
+			"name": "mesh_plane_outline_20098plane_outline",
 			"primitives": [
 				{
 					"attributes": {
@@ -2687,7 +2687,7 @@
 						"TANGENT": 169
 					},
 					"indices": 170,
-					"material": 2,
+					"material": 5,
 					"mode": 4
 				}
 			]
@@ -2762,9 +2762,9 @@
 			"children": [
 				9
 			],
-			"translation": [ -2348, 1594, 2976],
+			"translation": [ -2311.181, 1580.919, 3018.017],
 			"scale": [ 0.5142983, 1, 1.140405],
-			"rotation": [-0.119292, -0.7016863, -0.00672728, -0.7023963]
+			"rotation": [-0.1114844, -0.7030082, 0.04297748, -0.7010733]
 		},
 		{
 			"name": "node_cloud_Outline1",

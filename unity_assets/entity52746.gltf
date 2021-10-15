@@ -65,7 +65,7 @@
 	"buffers": [
 		{
 			"byteLength": 214848,
-			"uri": "entity16724.bin"
+			"uri": "entity52746.bin"
 		}
 	],
 	"bufferViews": [
@@ -139,7 +139,7 @@
 	],
 	"meshes": [
 		{
-			"name": "mesh_Palm_20432PalmBuildingInterior_Art",
+			"name": "mesh_Palm_19952PalmBuildingInterior_Art",
 			"primitives": [
 				{
 					"attributes": {

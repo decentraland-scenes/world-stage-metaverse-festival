@@ -101,7 +101,7 @@
 	"buffers": [
 		{
 			"byteLength": 53376,
-			"uri": "entity16728.bin"
+			"uri": "entity52838.bin"
 		}
 	],
 	"bufferViews": [
@@ -175,7 +175,7 @@
 	],
 	"meshes": [
 		{
-			"name": "mesh_Palm_unique_18072Palm",
+			"name": "mesh_Palm_unique_18376Palm",
 			"primitives": [
 				{
 					"attributes": {
@@ -191,7 +191,7 @@
 			]
 		},
 		{
-			"name": "mesh_Palm_unique_outline_18076Palm_unique_outline",
+			"name": "mesh_Palm_unique_outline_18380Palm_unique_outline",
 			"primitives": [
 				{
 					"attributes": {

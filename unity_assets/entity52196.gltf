@@ -587,7 +587,7 @@
 	"buffers": [
 		{
 			"byteLength": 85034,
-			"uri": "entity15758.bin"
+			"uri": "entity52196.bin"
 		}
 	],
 	"bufferViews": [
@@ -708,7 +708,7 @@
 	],
 	"meshes": [
 		{
-			"name": "mesh_RootAnimLightBulb_18366AnimLightBulb_Art",
+			"name": "mesh_RootAnimLightBulb_18670AnimLightBulb_Art",
 			"primitives": [
 				{
 					"attributes": {
@@ -724,7 +724,7 @@
 			]
 		},
 		{
-			"name": "mesh_LightBulbBase_18378LightBulbBase",
+			"name": "mesh_LightBulbBase_18682LightBulbBase",
 			"primitives": [
 				{
 					"attributes": {
@@ -740,7 +740,7 @@
 			]
 		},
 		{
-			"name": "mesh_LighBulbtEmitter_18386LighBulbtEmitter",
+			"name": "mesh_LighBulbtEmitter_18690LighBulbtEmitter",
 			"primitives": [
 				{
 					"attributes": {
@@ -767,7 +767,7 @@
 			]
 		},
 		{
-			"name": "mesh_LightBulbFade_18398LightBulbFade",
+			"name": "mesh_LightBulbFade_18702LightBulbFade",
 			"primitives": [
 				{
 					"attributes": {
@@ -783,7 +783,7 @@
 			]
 		},
 		{
-			"name": "mesh_LightBulbFade1_18396LightBulbFade1",
+			"name": "mesh_LightBulbFade1_18700LightBulbFade1",
 			"primitives": [
 				{
 					"attributes": {
@@ -799,7 +799,7 @@
 			]
 		},
 		{
-			"name": "mesh_LightBulbKoala_18402LightBulbKoala",
+			"name": "mesh_LightBulbKoala_18706LightBulbKoala",
 			"primitives": [
 				{
 					"attributes": {

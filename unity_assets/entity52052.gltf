@@ -857,7 +857,7 @@
 	"buffers": [
 		{
 			"byteLength": 191532,
-			"uri": "entity15682.bin"
+			"uri": "entity52052.bin"
 		}
 	],
 	"bufferViews": [
@@ -1053,7 +1053,7 @@
 	],
 	"meshes": [
 		{
-			"name": "mesh_RootAnimEntrance_19094Entrance_Art",
+			"name": "mesh_RootAnimEntrance_18604Entrance_Art",
 			"primitives": [
 				{
 					"attributes": {
@@ -1069,7 +1069,7 @@
 			]
 		},
 		{
-			"name": "mesh_Entrance_19100Entrance",
+			"name": "mesh_Entrance_18616Entrance",
 			"primitives": [
 				{
 					"attributes": {
@@ -1107,7 +1107,7 @@
 			]
 		},
 		{
-			"name": "mesh_aro_19128aro",
+			"name": "mesh_aro_18644aro",
 			"primitives": [
 				{
 					"attributes": {
@@ -1123,7 +1123,7 @@
 			]
 		},
 		{
-			"name": "mesh_aro1_19136aro1",
+			"name": "mesh_aro1_18652aro1",
 			"primitives": [
 				{
 					"attributes": {
@@ -1139,7 +1139,7 @@
 			]
 		},
 		{
-			"name": "mesh_aro2_19130aro2",
+			"name": "mesh_aro2_18646aro2",
 			"primitives": [
 				{
 					"attributes": {
@@ -1155,7 +1155,7 @@
 			]
 		},
 		{
-			"name": "mesh_Entrance_collider_19134Entrance_collider",
+			"name": "mesh_Entrance_collider_18650Entrance_collider",
 			"primitives": [
 				{
 					"attributes": {
@@ -1193,7 +1193,7 @@
 			]
 		},
 		{
-			"name": "mesh_Fade2_19142Fade2",
+			"name": "mesh_Fade2_18658Fade2",
 			"primitives": [
 				{
 					"attributes": {
@@ -1209,7 +1209,7 @@
 			]
 		},
 		{
-			"name": "mesh_Neon_Door_19138Neon_Door",
+			"name": "mesh_Neon_Door_18654Neon_Door",
 			"primitives": [
 				{
 					"attributes": {
@@ -1225,7 +1225,7 @@
 			]
 		},
 		{
-			"name": "mesh_Neon_Door1_19126Neon_Door1",
+			"name": "mesh_Neon_Door1_18642Neon_Door1",
 			"primitives": [
 				{
 					"attributes": {
@@ -1241,7 +1241,7 @@
 			]
 		},
 		{
-			"name": "mesh_Platform_19140Platform",
+			"name": "mesh_Platform_18656Platform",
 			"primitives": [
 				{
 					"attributes": {
@@ -1257,7 +1257,7 @@
 			]
 		},
 		{
-			"name": "mesh_Platform1_collider_19132Platform1_collider",
+			"name": "mesh_Platform1_collider_18648Platform1_collider",
 			"primitives": [
 				{
 					"attributes": {
@@ -1273,7 +1273,7 @@
 			]
 		},
 		{
-			"name": "mesh_Fade3_24416Fade3",
+			"name": "mesh_Fade3_18618Fade3",
 			"primitives": [
 				{
 					"attributes": {
@@ -1289,7 +1289,7 @@
 			]
 		},
 		{
-			"name": "mesh_Fade4_24412Fade4",
+			"name": "mesh_Fade4_18614Fade4",
 			"primitives": [
 				{
 					"attributes": {

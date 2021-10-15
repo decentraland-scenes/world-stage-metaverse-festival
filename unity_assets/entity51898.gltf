@@ -893,7 +893,7 @@
 	"buffers": [
 		{
 			"byteLength": 167120,
-			"uri": "entity15392.bin"
+			"uri": "entity51898.bin"
 		}
 	],
 	"bufferViews": [
@@ -962,7 +962,7 @@
 			"uri": "Assets/Visuals/Materials/Textures/Fade.png"
 		},
 		{
-			"uri": "Assets/Visuals/Materials/Textures/koala_poap_Albedo.png"
+			"uri": "Assets/Visuals/Materials/Textures/around_the_world_poap.png"
 		}
 	],
 	"materials": [
@@ -1065,7 +1065,7 @@
 	],
 	"meshes": [
 		{
-			"name": "mesh_poapMachine_18122PoapMachine_Art",
+			"name": "mesh_poapMachine_18426PoapMachine_Art",
 			"primitives": [
 				{
 					"attributes": {
@@ -1092,7 +1092,7 @@
 			]
 		},
 		{
-			"name": "mesh_cloudsPoap_18158cloudsPoap",
+			"name": "mesh_cloudsPoap_18462cloudsPoap",
 			"primitives": [
 				{
 					"attributes": {
@@ -1108,7 +1108,7 @@
 			]
 		},
 		{
-			"name": "mesh_details_poap_Machine1_18144details_poap_Machine1",
+			"name": "mesh_details_poap_Machine1_18448details_poap_Machine1",
 			"primitives": [
 				{
 					"attributes": {
@@ -1124,7 +1124,7 @@
 			]
 		},
 		{
-			"name": "mesh_details_poap_Machine2_18156details_poap_Machine2",
+			"name": "mesh_details_poap_Machine2_18460details_poap_Machine2",
 			"primitives": [
 				{
 					"attributes": {
@@ -1140,7 +1140,7 @@
 			]
 		},
 		{
-			"name": "mesh_details_poap_Machine3_18148details_poap_Machine3",
+			"name": "mesh_details_poap_Machine3_18452details_poap_Machine3",
 			"primitives": [
 				{
 					"attributes": {
@@ -1156,7 +1156,7 @@
 			]
 		},
 		{
-			"name": "mesh_details_poap_Machine4_18150details_poap_Machine4",
+			"name": "mesh_details_poap_Machine4_18454details_poap_Machine4",
 			"primitives": [
 				{
 					"attributes": {
@@ -1172,7 +1172,7 @@
 			]
 		},
 		{
-			"name": "mesh_glass_18152glass",
+			"name": "mesh_glass_18456glass",
 			"primitives": [
 				{
 					"attributes": {
@@ -1188,7 +1188,7 @@
 			]
 		},
 		{
-			"name": "mesh_Poap_MusicFestival_18154Poap_MusicFestival",
+			"name": "mesh_Poap_MusicFestival_18458Poap_MusicFestival",
 			"primitives": [
 				{
 					"attributes": {

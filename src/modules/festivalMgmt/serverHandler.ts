@@ -7,6 +7,8 @@ export let data: any
 
 let PING_INTERVAL = 5000
 
+let firstPing: boolean = true
+
 let serverInterval = new Entity()
 engine.addEntity(serverInterval)
 serverInterval.addComponent(
@@ -26,6 +28,7 @@ async function pingServer() {
     data = response
   } else {
     checkNewMessage(response)
+    firstPing = false
   }
 }
 
@@ -66,7 +69,11 @@ function checkNewMessage(res: any) {
     // no show
     log('no show yet')
     playDefaultVideo()
-  } else if (stage && stage.live && !data.stages[STAGE_ID].live) {
+  } else if (
+    stage &&
+    stage.live &&
+    (!data.stages[STAGE_ID].live || firstPing)
+  ) {
     // show is on, I'm not playing it
 
     if (

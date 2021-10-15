@@ -173,6 +173,7 @@ export function playDefaultVideo() {
 
   // main video
   videoMat.texture = myVideoTexture
+  myVideoTexture.loop = true
   myVideoTexture.playing = true
 
   runAction('artist0')

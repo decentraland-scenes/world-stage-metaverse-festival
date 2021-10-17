@@ -20,7 +20,7 @@ export function runAction(action: string) {
 
       break
     case 'PAUSEALL':
-
+      break
     case 'L0':
       break
     case 'L1':

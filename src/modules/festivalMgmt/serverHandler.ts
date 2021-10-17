@@ -1,7 +1,7 @@
 import * as utils from '@dcl/ecs-scene-utils'
 import * as ui from '@dcl/ui-scene-utils'
 import { STAGE_ID } from './manageShow'
-import { playDefaultVideo, startShow, stopShow } from './showTrigger'
+import { playDefaultVideo, playerFar, startShow, stopShow } from './showTrigger'
 
 export let data: any
 
@@ -18,6 +18,7 @@ serverInterval.addComponent(
 )
 
 async function pingServer() {
+  if (playerFar) return
   let result = await fetch(
     'https://dclteam.s3.us-west-1.amazonaws.com/festival.json?v=' +
       Date.now() / 1000

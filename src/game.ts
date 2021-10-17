@@ -31,6 +31,8 @@ entity15488.getComponent(Transform).scale.set(1, 1, 1)
 entity15488.addComponent(new GLTFShape('unity_assets/entity15488.gltf'))
 entity15488.getComponent(GLTFShape).withCollisions = false
 entity15488.getComponent(Transform).rotation.set(0, 1, 0, -4.371139e-8)
+engine.addEntity(entity15488)
+
 var entity15700 = new Entity('flamingoV1_Art')
 entity15700.setParent(entity15492)
 entity15700.addComponent(
@@ -41,6 +43,8 @@ entity15700.getComponent(Transform).scale.set(1, 1, 1)
 entity15700.addComponent(new GLTFShape('unity_assets/entity15700.gltf'))
 entity15700.getComponent(GLTFShape).withCollisions = false
 entity15700.getComponent(Transform).rotation.set(0, 0.9427237, 0, -0.3335747)
+engine.addEntity(entity15700)
+
 var entity16872 = new Entity('flamingoV2_Art')
 entity16872.setParent(entity15492)
 entity16872.addComponent(
@@ -51,6 +55,8 @@ entity16872.getComponent(Transform).scale.set(0.5938382, 0.5938381, 0.5938382)
 entity16872.addComponent(new GLTFShape('unity_assets/entity16872.gltf'))
 entity16872.getComponent(GLTFShape).withCollisions = false
 entity16872.getComponent(Transform).rotation.set(0, 0.3124217, 0, -0.9499435)
+engine.addEntity(entity16872)
+
 var entity15614 = new Entity('Entrance_Art')
 entity15614.setParent(entity15492)
 entity15614.addComponent(new Transform({ position: new Vector3(0, 0, 0) }))
@@ -59,6 +65,8 @@ entity15614.getComponent(Transform).scale.set(1, 1, 1)
 entity15614.addComponent(new GLTFShape('unity_assets/entity15614.gltf'))
 entity15614.getComponent(GLTFShape).withCollisions = false
 entity15614.getComponent(Transform).rotation.set(0, 1, 0, -4.371139e-8)
+engine.addEntity(entity15614)
+
 var entity16780 = new Entity('flamingoV3_Art')
 entity16780.setParent(entity15492)
 entity16780.addComponent(

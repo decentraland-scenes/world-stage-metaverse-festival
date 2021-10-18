@@ -1,7 +1,7 @@
 import * as utils from '@dcl/ecs-scene-utils'
 import * as ui from '@dcl/ui-scene-utils'
 import { STAGE_ID } from './manageShow'
-import { playDefaultVideo, playerFar, startShow, stopShow } from './showTrigger'
+import { playDefaultVideo, startShow, stopShow } from './showTrigger'
 
 export let data: any
 
@@ -204,3 +204,29 @@ function checkNewMessage(res: any) {
 }
 
 pingServer()
+
+export let playerFar: boolean = true
+
+let showTrigger = new Entity()
+showTrigger.addComponent(
+  new Transform({
+    position: new Vector3(32, 0, 32),
+  })
+)
+engine.addEntity(showTrigger)
+
+showTrigger.addComponent(
+  new utils.TriggerComponent(
+    new utils.TriggerBoxShape(new Vector3(78, 78, 78)),
+    {
+      onCameraEnter: () => {
+        playerFar = false
+        pingServer()
+      },
+      onCameraExit: () => {
+        playerFar = true
+        stopShow()
+      },
+    }
+  )
+)

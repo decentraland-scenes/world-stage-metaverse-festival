@@ -1,3 +1,13 @@
+import {
+  fireWork1,
+  fireWork2,
+  fireWork3,
+  fireWork4,
+  PlatesStage,
+  SecondaryStage,
+  SpotLights,
+} from './animatedEntities'
+
 // Default beats per minute of show
 export let BPM = 120
 
@@ -20,38 +30,88 @@ export function runAction(action: string) {
 
       break
     case 'PAUSEALL':
-      break
-    case 'L0':
-      break
-    case 'L1':
-      break
-    case 'L2':
-      break
-    case 'L3':
+      SecondaryStage.stopAllAnimations()
+      PlatesStage.stopAllAnimations()
+      SpotLights.stopAllAnimations()
       break
 
-    case 'L4':
+    case 'chill':
+      PlatesStage.playAnimation('PlatesStage_Art', false, 0, BPM / 120 / 4)
+      SpotLights.playAnimation(
+        'Spot_LightsANdCLouds_Art',
+        false,
+        0,
+        BPM / 120 / 4
+      )
+
       break
 
-    case 'L5':
+    case 'up':
+      SecondaryStage.playAnimation(
+        'AnimSecondaryStage_Art',
+        false,
+        0,
+        BPM / 120
+      )
+      PlatesStage.playAnimation('PlatesStage_Art', false, 0, BPM / 120)
+      SpotLights.playAnimation('Spot_LightsANdCLouds_Art', false, 0, BPM / 120)
+      runAction('randomFirework')
       break
 
-    case 'L6':
+    case 'secondary_stage':
+      SecondaryStage.playAnimation(
+        'AnimSecondaryStage_Art',
+        false,
+        0,
+        BPM / 120
+      )
+      break
+    case 'secondary_stage_pause':
+      SecondaryStage.stopAllAnimations()
+      break
+    case 'roof':
+      PlatesStage.playAnimation('PlatesStage_Art', false, 0, BPM / 120)
+      break
+    case 'roof_pause':
+      PlatesStage.stopAllAnimations()
+      break
+
+    case 'spotlights':
+      SpotLights.playAnimation('Spot_LightsANdCLouds_Art', false, 0, BPM / 120)
+      break
+
+    case 'spotlights_pause':
+      SpotLights.stopAllAnimations()
+      break
+
+    case 'fireWork1':
+      fireWork1.playAnimation('AnimFireWork', true)
+      break
+
+    case 'fireWork2':
+      fireWork2.playAnimation('AnimFireWork', true)
+      break
+
+    case 'fireWork3':
+      fireWork3.playAnimation('AnimFireWork', true)
+      break
+
+    case 'fireWork4':
+      fireWork4.playAnimation('AnimFireWork', true)
+      break
+
+    case 'fireWorks_All':
+      fireWork1.playAnimation('AnimFireWork', true)
+      fireWork2.playAnimation('AnimFireWork', true)
+      fireWork3.playAnimation('AnimFireWork', true)
+      fireWork4.playAnimation('AnimFireWork', true)
       break
 
     case 'L7':
       break
 
-    case 'randomL2L3':
-      randomizer([`L2`, `L3`], 8)
-      break
-
-    case 'randomL4L5':
-      randomizer([`L4`, `L5`], 8)
-      break
-
-    case 'randomL6L7':
-      randomizer([`L6`, `L7`], 8)
+    case 'randomFirework':
+      randomizer([`fireWork1`, `fireWork2`, `fireWork3`, `fireWork4`], 16)
       break
 
     case 'artist0':

@@ -11,7 +11,7 @@ export type showType = {
 
 export const subtitlesList = [
   subtitleString,
-  subtitleString2,
+  subtitleString,
   subtitleString,
   subtitleString,
   subtitleString,

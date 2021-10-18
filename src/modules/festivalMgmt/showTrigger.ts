@@ -190,6 +190,9 @@ input.subscribe('BUTTON_DOWN', ActionButton.PRIMARY, false, (e) => {
   runAction('state5')
 })
 
+function pingServer() {
+  throw new Error('Function not implemented.')
+}
 // /////// REMOVE ////////
 // // DEBUG PANEL  (to remove!)
 // let canvas = new UICanvas()

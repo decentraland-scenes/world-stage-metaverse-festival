@@ -2,11 +2,13 @@ import { getUserData, UserData } from '@decentraland/Identity'
 //import { getCurrentRealm, Realm } from '@decentraland/EnvironmentAPI'
 //import * as EthereumController from '@decentraland/EthereumController'
 import * as ui from '@dcl/ui-scene-utils'
-
+import { UserService } from '../services/userService'
+import { setTimeout } from '@dcl/ecs-scene-utils'
 //import { PlayCloseSound, PlayCoinSound, PlayOpenSound } from './sounds'
 
+
 //export let ethController = EthereumController
-const POAP_SERVER = 'https://lowpolyhub.com/api/poap/'
+const POAP_SERVER = "https://v2.lowpolyhub.com:3000/poaps/"
 
 export let userData: UserData
 ///export let playerRealm: Realm
@@ -48,7 +50,7 @@ export async function handlePoap(eventName: string) {
 
   if (userData.hasConnectedWeb3) {
     let poap = await sendpoap(eventName)
-    if (poap && poap.status == 'success') {
+    if (poap && poap.status == 200) {
       //PlayCoinSound()
       let p = new ui.OkPrompt(
         "A POAP token for today's event will arrive to your account very soon!",
@@ -62,8 +64,8 @@ export async function handlePoap(eventName: string) {
     } else {
       //PlayOpenSound()
       let text = 'Something is wrong with the server, please try again later.'
-      if (poap && poap.error) {
-        text = poap.error
+      if (poap && poap.msg) {
+        text = poap.msg
       }
       let p = new ui.OkPrompt(
         text,
@@ -101,7 +103,10 @@ export async function sendpoap(eventName: string) {
     await setRealm()
   }*/
 
-  const url = POAP_SERVER + eventName + '?address=' + userData.userId
+  await UserService.instance().signAndLogin()
+  const loginToken = UserService.instance().getAccessToken()      
+
+  const url = POAP_SERVER + eventName + "/" + userData.userId
 
   /*let body = JSON.stringify({
     address: userData.userId,
@@ -112,8 +117,11 @@ export async function sendpoap(eventName: string) {
   log('sending req to: ', url)
   try {
     let response = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      method: 'GET',
+      headers: { 
+        'Authorization': "Bearer "+loginToken,
+        'Content-Type': 'application/json' 
+      },
       //body: body,
     })
     let data = await response.json()
@@ -125,47 +133,13 @@ export async function sendpoap(eventName: string) {
   }
 }
 
-export async function hasPolygonalPoap(eventName: string) {
-  if (!userData) {
-    await setUserData()
-  }
-
-  const url =
-    'https://lowpolyhub.com/api/hasPoap/' +
-    eventName +
-    '?address=' +
-    userData.userId
-
-  /*let body = JSON.stringify({
-    address: userData.userId,
-    catalyst: playerRealm.serverName,
-    room: playerRealm.layer,
-  })
-  console.log(body)*/
-  //log('sending req to: ', url)
-  try {
-    let response = await fetch(url, {
-      method: 'GET',
-      headers: { 'Content-Type': 'application/json' },
-      //body: body,
-    })
-    let data = await response.json()
-    log('Poap status: ', data)
-
-    return data.result
-  } catch (e) {
-    console_log(e)
-    log('error fetching from token server ', url)
-    return false
-  }
-}
-
 export async function hasPoap(eventId: number) {
+
   if (!userData) {
     await setUserData()
   }
 
-  const url = 'https://api.poap.xyz/actions/scan/' + userData.userId
+  const url = "https://api.poap.xyz/actions/scan/" + userData.userId
 
   /*let body = JSON.stringify({
     address: userData.userId,
@@ -183,42 +157,44 @@ export async function hasPoap(eventId: number) {
     let data = await response.json()
     for (let index = 0; index < data.length; index++) {
       if (data[index]?.event?.id == eventId) {
-        return true
+        return true;
       }
     }
     return false
-  } catch (e) {
+  } catch (e){
     console_log(e)
     log('error fetching from token server ', url)
     return false
+    
   }
 }
 
-@Component('Poap')
+@Component("Poap")
 export class Poap {
   entity: Entity
-  constructor(
-    entity: Entity,
-    eventName: string,
-    bSpawnDefaultModel: boolean = true,
-    bannerEntity: Entity = null
-  ) {
+  inCooldown: boolean = false 
+  constructor(entity: Entity, eventName: string, bSpawnDefaultModel: boolean = true, bannerEntity: Entity = null) {
     this.entity = entity
-    if (
-      !bSpawnDefaultModel &&
-      (entity.hasComponent(GLTFShape) ||
-        entity.hasComponent(BoxShape) ||
-        entity.hasComponent(SphereShape))
-    ) {
-      entity.addComponent(
-        new OnPointerDown(
-          (e) => {
+    if (!bSpawnDefaultModel && (entity.hasComponent(GLTFShape) || entity.hasComponent(BoxShape) || entity.hasComponent(SphereShape))) {
+      entity.addComponent(new OnPointerDown(
+        (e) => {
+          if (!this.inCooldown) {
+            this.inCooldown = true
+            var self = this
+            setTimeout(4000,() => {
+              self.inCooldown = false
+            });
             handlePoap(eventName)
-          },
-          { hoverText: 'Get Attendance Token' }
-        )
-      )
-    } else {
+          }
+          
+        },
+        { 
+          hoverText: 'Get Attendance Token',
+          button: ActionButton.POINTER
+        }
+      ))
+    }
+    else{
       // POAP BOOTH
       let POAPBooth = new Dispenser(
         {
@@ -232,6 +208,7 @@ export class Poap {
       POAPCore.addComponent(new Transform())
       POAPBooth.setParent(POAPCore)
       POAPCore.setParent(entity)
+      
     }
 
     // POAP BANNER
@@ -239,18 +216,19 @@ export class Poap {
       let POAPBanner = new Entity()
       POAPBanner.addComponent(new Transform({}))
       POAPBanner.addComponent(new GLTFShape('assets/poap/POAP_Banner.glb'))
-      POAPBanner.addComponent(
-        new OnPointerDown(
-          (e) => {
-            openExternalURL('https://app.poap.xyz/')
-          },
-          { hoverText: 'Learn More' }
-        )
-      )
+      POAPBanner.addComponent(new OnPointerDown(
+        (e) => {
+          openExternalURL('https://app.poap.xyz/')
+        },
+        { hoverText: 'Learn More' }
+      ))
       POAPBanner.setParent(bannerEntity)
     }
+
   }
+
 }
+
 
 export class Dispenser extends Entity {
   idleAnim = new AnimationState('Idle_POAP', { looping: true })
@@ -258,6 +236,7 @@ export class Dispenser extends Entity {
   buttonAnim = new AnimationState('Button_Action', { looping: false })
   eventName: string
   timeout: any
+  inCooldown: boolean = false
   constructor(transform: TransformConstructorArgs, eventName: string) {
     super()
     //engine.addEntity(this)
@@ -277,17 +256,25 @@ export class Dispenser extends Entity {
     button.addComponent(new Animator())
     button.getComponent(Animator).addClip(this.buttonAnim)
     button.setParent(this)
-    button.addComponent(
-      new OnPointerDown(
-        (e) => {
-          button.getComponent(Animator).getClip('Action').stop()
-          button.getComponent(Animator).getClip('Action').play()
-          //sceneMessageBus.emit('activatePoap', {})
+    button.addComponent(new OnPointerDown(
+      (e) => {
+        button.getComponent(Animator).getClip('Action').stop()
+        button.getComponent(Animator).getClip('Action').play()
+        //sceneMessageBus.emit('activatePoap', {})
+        if (!this.inCooldown) {
+          this.inCooldown = true
+          var self = this
+          setTimeout(4000,() => {
+            self.inCooldown = false
+          });
           handlePoap(eventName)
-        },
-        { hoverText: 'Get Attendance Token' }
-      )
-    )
+        }
+      },
+      { 
+        hoverText: 'Get Attendance Token',
+        button: ActionButton.POINTER
+      }
+    ))
   }
 
   public activate(): void {

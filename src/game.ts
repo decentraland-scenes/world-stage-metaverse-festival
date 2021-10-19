@@ -1,10 +1,6 @@
 import { Poap } from "./imports/index"
-import { TagComponent } from "./imports/index"
-import { getHUD } from "./hud"
 
 var entity16006 = new Entity("Main Camera")
-entity16006.addComponent(new TagComponent())
-entity16006.getComponent(TagComponent).tag = "MainCamera" 
 engine.addEntity(entity16006)
 entity16006.addComponent(new Transform({ position: new Vector3(0, 1, -10) }))
 entity16006.getComponent(Transform).rotation.set(0, 0, 0, 1)
@@ -287,26 +283,3 @@ entity16024.addComponent(new Transform({ position: new Vector3(0, -1.41, 0) }))
 entity16024.getComponent(Transform).rotation.set(0, 1, 0, 0)
 entity16024.getComponent(Transform).scale.set(1, 1, 1)
 entity16024.addComponent(new GLTFShape("assets/glb_assets/PlatesStage.glb"))
-
-const HUD = getHUD()
-
-const iconList0 = HUD.createIconList({
-  bVisible: true,
-  vAlign: "center",
-  hAlign: "left",
-  positionX: 1,
-  positionY: 25,
-  stackOrientation: 0,
-  spacing: 6
-})
-
-const iconData_0_0 = {
-  imageURL: "assets/UI_Icon_Info.png",
-  imageSize: { x: 225, y: 225},
-  imageScale: { x: 0.2, y: 0.2},
-  vAlign: "center",
-  hAlign: "center",
-  bVisible: true,
-}
-
-iconList0.createIconURL("",iconData_0_0)

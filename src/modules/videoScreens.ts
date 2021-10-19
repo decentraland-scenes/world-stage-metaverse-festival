@@ -12,7 +12,7 @@
 export const videoMat = new BasicMaterial()
 
 // S1
-const S1 = new Entity()
+export const S1 = new Entity()
 const planeS1 = new PlaneShape()
 
 S1.addComponent(planeS1)

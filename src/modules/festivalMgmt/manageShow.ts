@@ -32,7 +32,7 @@ export function runAction(action: string) {
     case 'PAUSEALL':
       SecondaryStage.stopAllAnimations()
       PlatesStage.stopAllAnimations()
-      SpotLights.stopAllAnimations()
+      SpotLights.hide()
       break
 
     case 'chill':

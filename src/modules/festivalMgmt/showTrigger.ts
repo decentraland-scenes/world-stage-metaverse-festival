@@ -3,6 +3,7 @@ import { runAction } from '../festivalMgmt/manageShow'
 import { NodeCue, SubtitleSystem } from '../subtitle/SubtitleSystem'
 import { VideoSystem } from '../festivalMgmt/VideoSystem'
 import * as utils from '@dcl/ecs-scene-utils'
+import { hideBoard, startNextShowCounter } from './nextShowCounter'
 
 import { videoMat } from '../videoScreens'
 
@@ -136,6 +137,8 @@ export function playVideo(
   const myVideoClip = new VideoClip(show.link)
   const myVideoTexture = new VideoTexture(myVideoClip)
 
+  hideBoard()
+
   // main video
   videoMat.texture = myVideoTexture
 
@@ -160,7 +163,7 @@ export function playVideo(
 
 let PLAYING_DEFAULT: boolean = false
 
-export function playDefaultVideo() {
+export function playDefaultVideo(runOfShow?: showType[]) {
   if (PLAYING_DEFAULT) {
     return
   }
@@ -177,6 +180,10 @@ export function playDefaultVideo() {
   myVideoTexture.playing = true
 
   runAction('artist0')
+
+  if (runOfShow) {
+    startNextShowCounter(runOfShow)
+  }
 }
 
 ///// DEBUG  REMOVE!!!

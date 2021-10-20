@@ -8,7 +8,9 @@ import { hideBoard, startNextShowCounter } from './nextShowCounter'
 import { videoMat } from '../videoScreens'
 
 const DEFAULT_VIDEO =
-  'https://player.vimeo.com/external/552481870.m3u8?s=c312c8533f97e808fccc92b0510b085c8122a875'
+  'https://player.vimeo.com/external/637033978.m3u8?s=7e6e280df61ad3555a0d1602e848645d7c1c9886'
+//'https://player.vimeo.com/external/637034879.m3u8?s=f2942a5495877f44fd6f30e7f82479efa5f33b37'
+//'https://player.vimeo.com/external/552481870.m3u8?s=c312c8533f97e808fccc92b0510b085c8122a875'
 
 export class CustomSubtitleSystem extends SubtitleSystem {
   constructor(text: string) {
@@ -197,9 +199,6 @@ input.subscribe('BUTTON_DOWN', ActionButton.PRIMARY, false, (e) => {
   runAction('state5')
 })
 
-function pingServer() {
-  throw new Error('Function not implemented.')
-}
 // /////// REMOVE ////////
 // // DEBUG PANEL  (to remove!)
 // let canvas = new UICanvas()

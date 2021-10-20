@@ -1,6 +1,7 @@
 import { subtitleString } from './subtitle-files/BPMtoSubs1'
-import { subtitleString2 } from './subtitle-files/OliverDemoMerged2'
-
+import { CharlieSubs } from './subtitle-files/Charlie'
+import { SharkieSubs } from './subtitle-files/Sharkie'
+import { TurbansSubs } from './subtitle-files/theTurbansBPM'
 export type showType = {
   link: string
   subs?: string
@@ -10,9 +11,9 @@ export type showType = {
 }
 
 export const subtitlesList = [
-  subtitleString,
-  subtitleString,
-  subtitleString,
+  CharlieSubs,
+  SharkieSubs,
+  TurbansSubs,
   subtitleString,
   subtitleString,
   subtitleString,
@@ -29,7 +30,7 @@ export const shows: any = {
   nadia: { url: 'peer-ec1.decentraland.org' },
   test: {
     link: 'videos/OliverResumeBPMTest.mp4',
-    subs: subtitleString2,
+    subs: TurbansSubs,
     startTime: 1633650252,
     length: 15,
   },

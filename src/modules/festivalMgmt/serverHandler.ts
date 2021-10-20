@@ -17,7 +17,7 @@ serverInterval.addComponent(
   })
 )
 
-async function pingServer() {
+export async function pingServer() {
   if (playerFar) return
   let result = await fetch(
     'https://dclteam.s3.us-west-1.amazonaws.com/festival.json?v=' +
@@ -225,8 +225,8 @@ showTrigger.addComponent(
       },
       onCameraExit: () => {
         playerFar = true
-        stopShow()
         data.stages[STAGE_ID].live = false
+        stopShow()
       },
     }
   )

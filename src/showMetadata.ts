@@ -1,5 +1,5 @@
 import { subtitleString } from './subtitle-files/BPMtoSubs1'
-import { CharlieSubs } from './subtitle-files/Charlie'
+import { NancyeSubs } from './subtitle-files/Nancy'
 import { SharkieSubs } from './subtitle-files/Sharkie'
 import { TurbansSubs } from './subtitle-files/theTurbansBPM'
 export type showType = {
@@ -11,7 +11,7 @@ export type showType = {
 }
 
 export const subtitlesList = [
-  CharlieSubs,
+  NancyeSubs,
   SharkieSubs,
   TurbansSubs,
   subtitleString,

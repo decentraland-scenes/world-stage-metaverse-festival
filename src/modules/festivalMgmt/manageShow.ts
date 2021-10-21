@@ -7,6 +7,7 @@ import {
   SecondaryStage,
   SpotLights,
 } from './animatedEntities'
+import { setArtistName } from './nextShowCounter'
 
 // Default beats per minute of show
 export let BPM = 120
@@ -78,6 +79,15 @@ export function runAction(action: string) {
 
     case 'spotlights':
       SpotLights.playAnimation('Spot_LightsANdCLouds_Art', false, 0, BPM / 120)
+      break
+
+    case 'spotlights_slow':
+      SpotLights.playAnimation(
+        'Spot_LightsANdCLouds_Art',
+        false,
+        0,
+        BPM / 120 / 8
+      )
       break
 
     case 'spotlights_pause':

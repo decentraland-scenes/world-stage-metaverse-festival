@@ -136,3 +136,37 @@ function secondsToString(rawSeconds: number) {
 
   return hours + ':' + minutes + ':' + seconds
 }
+
+/// current show
+
+let currentShow = new Entity()
+//currentShow.setParent(S1)
+export let currentShowText = new TextShape('')
+currentShow.addComponent(currentShowText)
+currentShow.addComponent(
+  new Transform({
+    position: new Vector3(17.5, 2.2, 32),
+    rotation: Quaternion.Euler(0, 270, 0),
+    scale: new Vector3(2, 2, 2),
+  })
+)
+
+currentShowText.value = ''
+currentShowText.visible = true
+currentShowText.fontSize = 4
+// currentShowText.font = new Font(Fonts.SanFrancisco_Heavy)
+currentShowText.textWrapping = true
+currentShowText.width = 15
+currentShowText.outlineColor = Color3.Black()
+currentShowText.outlineWidth = 0.2
+engine.addEntity(currentShow)
+
+export function setArtistName(name: string) {
+  currentShowText.visible = true
+  currentShowText.value = 'Test'
+}
+
+export function hideArtistName() {
+  currentShowText.visible = false
+  currentShowText.value = ''
+}

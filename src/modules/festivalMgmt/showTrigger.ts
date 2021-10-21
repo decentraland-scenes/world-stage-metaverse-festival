@@ -3,12 +3,18 @@ import { runAction } from '../festivalMgmt/manageShow'
 import { NodeCue, SubtitleSystem } from '../subtitle/SubtitleSystem'
 import { VideoSystem } from '../festivalMgmt/VideoSystem'
 import * as utils from '@dcl/ecs-scene-utils'
-import { hideBoard, startNextShowCounter } from './nextShowCounter'
+import {
+  hideArtistName,
+  hideBoard,
+  setArtistName,
+  startNextShowCounter,
+} from './nextShowCounter'
 
 import { videoMat } from '../videoScreens'
 
 const DEFAULT_VIDEO =
-  'https://player.vimeo.com/external/637033978.m3u8?s=7e6e280df61ad3555a0d1602e848645d7c1c9886'
+  'https://player.vimeo.com/external/637531989.m3u8?s=0a75c635933b3588464fcbee094839bf08f9c252'
+//   'https://player.vimeo.com/external/637033978.m3u8?s=7e6e280df61ad3555a0d1602e848645d7c1c9886'
 //'https://player.vimeo.com/external/637034879.m3u8?s=f2942a5495877f44fd6f30e7f82479efa5f33b37'
 //'https://player.vimeo.com/external/552481870.m3u8?s=c312c8533f97e808fccc92b0510b085c8122a875'
 
@@ -125,6 +131,7 @@ export function stopShow() {
   }
 
   PLAYING_DEFAULT = false
+  hideArtistName()
 }
 
 export function playVideo(
@@ -159,8 +166,7 @@ export function playVideo(
   log('ARTIST NAME', artistSignAnimation)
 
   runAction(artistSignAnimation)
-
-  // TODO: PICK SIGN W ARTIST NAME
+  setArtistName(show.artist)
 }
 
 let PLAYING_DEFAULT: boolean = false

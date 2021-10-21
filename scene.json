@@ -6,7 +6,7 @@
     "favicon": "favicon_asset"
   },
   "contact": {
-    "name": "Person",
+    "name": "Decentraland Foundation",
     "email": "Email"
   },
   "owner": "ETH Address",
@@ -62,5 +62,8 @@
       "-60,87"
     ],
     "base": "-63,84"
-  }
+  },
+  "featureToggles": {
+    "voiceChat": "disabled"
+}
 }

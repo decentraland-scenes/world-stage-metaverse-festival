@@ -163,7 +163,7 @@ engine.addEntity(currentShow)
 
 export function setArtistName(name: string) {
   currentShowText.visible = true
-  currentShowText.value = 'name'
+  currentShowText.value = name
 }
 
 export function hideArtistName() {

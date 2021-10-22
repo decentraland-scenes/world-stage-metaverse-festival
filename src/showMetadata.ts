@@ -1,5 +1,5 @@
 import { subtitleString } from './subtitle-files/BPMtoSubs1'
-import { NancyeSubs } from './subtitle-files/Nancy'
+import { SofiaSubs } from './subtitle-files/Sofia'
 import { SharkieSubs } from './subtitle-files/Sharkie'
 import { TurbansSubs } from './subtitle-files/theTurbansBPM'
 import { SantaSubs } from './subtitle-files/santaflowBPM'
@@ -12,12 +12,7 @@ export type showType = {
   artist: string
 }
 
-export const subtitlesList = [
-  NancyeSubs,
-  SharkieSubs,
-  SantaSubs,
-  subtitleString,
-]
+export const subtitlesList = [NancyeSubs, SofiaSubs, SantaSubs, subtitleString]
 
 export const shows: any = {
   deadmau5: {

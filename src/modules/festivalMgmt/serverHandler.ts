@@ -20,7 +20,7 @@ serverInterval.addComponent(
 export async function pingServer() {
   if (playerFar) return
   let result = await fetch(
-    'https://dclteam.s3.us-west-1.amazonaws.com/festival.json?v=' +
+    'https://dclteam.s3.us-west-1.amazonaws.com/festival2.json?v=' +
       Date.now() / 1000
   )
   let response = await result.json()

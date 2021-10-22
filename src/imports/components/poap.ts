@@ -46,7 +46,7 @@ export async function handlePoap(eventName: string) {
 
   if (userData.hasConnectedWeb3) {
     let poap = await sendpoap(eventName)
-    if (poap && poap.status == 200) {
+    if (poap && poap.ok == "true") {
       //PlayCoinSound()
       let p = new ui.OkPrompt(
         "A POAP token for today's event will arrive to your account very soon!",

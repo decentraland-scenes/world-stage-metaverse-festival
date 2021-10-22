@@ -57,7 +57,7 @@ export function startNextShowCounter(runOfShow: showType[]) {
   }
 
   if (!nextShow) {
-    setBoardMessage("That's all for today. See you tomorrow!")
+    setBoardMessage("That's all for today on this stage. See you tomorrow!")
     return
   }
 

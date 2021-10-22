@@ -2,6 +2,8 @@ import { subtitleString } from './subtitle-files/BPMtoSubs1'
 import { NancyeSubs } from './subtitle-files/Nancy'
 import { SharkieSubs } from './subtitle-files/Sharkie'
 import { TurbansSubs } from './subtitle-files/theTurbansBPM'
+import { SantaSubs } from './subtitle-files/santaflowBPM'
+
 export type showType = {
   link: string
   subs?: string
@@ -13,10 +15,7 @@ export type showType = {
 export const subtitlesList = [
   NancyeSubs,
   SharkieSubs,
-  TurbansSubs,
-  subtitleString,
-  subtitleString,
-  subtitleString,
+  SantaSubs,
   subtitleString,
 ]
 

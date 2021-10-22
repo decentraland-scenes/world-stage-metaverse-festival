@@ -197,7 +197,7 @@ entity15412.addComponent(new GLTFShape('unity_assets/entity15412.gltf'))
 entity15412.getComponent(GLTFShape).withCollisions = false
 entity15412.getComponent(Transform).rotation.set(0, 0.809172, 0, -0.5875719)
 entity15412.addComponent(
-  new Poap(entity15412, 'MF2021_AroundTheWorld', false, null)
+  new Poap(entity15412, '11430', false, null)
 )
 var entity16228 = new Entity('Palm')
 entity16228.setParent(entity15444)

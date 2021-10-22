@@ -167,7 +167,6 @@ export class Poap {
       !bSpawnDefaultModel &&
       (entity.hasComponent(GLTFShape) || entity.hasComponent(BoxShape) || entity.hasComponent(SphereShape))
     ) {
-      log('okkkkkk')
       entity.addComponent(
         new OnPointerDown(
           (e) => {

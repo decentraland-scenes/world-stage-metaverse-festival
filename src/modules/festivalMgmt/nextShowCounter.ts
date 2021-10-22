@@ -9,7 +9,7 @@ messageBoard.addComponent(
   new Transform({
     position: new Vector3(0, 0, 0.2),
     rotation: Quaternion.Euler(0, 180, 0),
-    scale: new Vector3(0.25, 0.25, 0.25),
+    scale: new Vector3(0.25, (0.25 / 9) * 16, 0.25),
   })
 )
 messageText.visible = false

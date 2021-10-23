@@ -28,12 +28,11 @@ export function runAction(action: string) {
       if (RandomizerSystem._instance) {
         RandomizerSystem._instance.active = false
       }
-
-      break
-    case 'PAUSEALL':
       SecondaryStage.stopAllAnimations()
       PlatesStage.stopAllAnimations()
       SpotLights.hide()
+      break
+    case 'PAUSEALL':
       break
 
     case 'chill':
@@ -117,7 +116,8 @@ export function runAction(action: string) {
       fireWork4.playAnimation('AnimFireWork', true)
       break
 
-    case 'L7':
+    case 'randUp':
+      randomizer([`up`, `fireWork2`, `fireWork3`, `fireWork4`], 32)
       break
 
     case 'randomFirework':

@@ -3,6 +3,7 @@ import { NancyeSubs } from './subtitle-files/Nancy'
 import { SharkieSubs } from './subtitle-files/Sharkie'
 import { TurbansSubs } from './subtitle-files/theTurbansBPM'
 import { SantaSubs } from './subtitle-files/santaflowBPM'
+import { LokiSubs } from './subtitle-files/lokiSubs'
 
 export type showType = {
   link: string
@@ -12,12 +13,7 @@ export type showType = {
   artist: string
 }
 
-export const subtitlesList = [
-  NancyeSubs,
-  SharkieSubs,
-  SantaSubs,
-  subtitleString,
-]
+export const subtitlesList = [LokiSubs, SharkieSubs, SantaSubs, subtitleString]
 
 export const shows: any = {
   deadmau5: {

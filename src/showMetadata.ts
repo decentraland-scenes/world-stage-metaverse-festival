@@ -1,9 +1,9 @@
 import { subtitleString } from './subtitle-files/BPMtoSubs1'
 import { NancyeSubs } from './subtitle-files/Nancy'
-import { SharkieSubs } from './subtitle-files/Sharkie'
+import { RenuSubs } from './subtitle-files/renuSubs'
 import { TurbansSubs } from './subtitle-files/theTurbansBPM'
-import { SantaSubs } from './subtitle-files/santaflowBPM'
-import { LokiSubs } from './subtitle-files/lokiSubs'
+import { MorskySubs } from './subtitle-files/morskySubs'
+import { VirtuSubs } from './subtitle-files/virtuSubs'
 
 export type showType = {
   link: string
@@ -13,7 +13,7 @@ export type showType = {
   artist: string
 }
 
-export const subtitlesList = [LokiSubs, SharkieSubs, SantaSubs, subtitleString]
+export const subtitlesList = [RenuSubs, MorskySubs, VirtuSubs, subtitleString]
 
 export const shows: any = {
   deadmau5: {

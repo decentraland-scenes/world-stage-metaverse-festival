@@ -13,20 +13,23 @@ export type showType = {
   artist: string
 }
 
-export const subtitlesList = [RenuSubs, MorskySubs, VirtuSubs, subtitleString]
-
-export const shows: any = {
-  deadmau5: {
-    link: `https://player.vimeo.com/external/616165133.m3u8?s=b904d959337c905551285b3fbd7325bc077638d7`,
-    subs: subtitleString,
-    startTime: 1633650252,
-    length: 47,
+export const shows: showType[] = [
+  {
+    artist: 'The Turbans',
+    link: `https://player.vimeo.com/external/637254926.m3u8?s=f83d3e2cb524af1fab23b44bed2a1d57efe2963b`,
+    subs: TurbansSubs,
+    startTime: 1635439030,
+    length: 53 * 60 + 34,
   },
-  nadia: { url: 'peer-ec1.decentraland.org' },
-  test: {
+  {
+    artist: 'Test',
     link: 'videos/OliverResumeBPMTest.mp4',
     subs: TurbansSubs,
     startTime: 1633650252,
     length: 15,
   },
-}
+]
+
+// TIP
+// use this website to obtain the unix time
+// https://www.epochconverter.com/

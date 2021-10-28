@@ -125,15 +125,19 @@ export function runAction(action: string) {
       break
 
     case 'artist0':
+      // hide all artist names
       break
 
     case 'artist1':
+      // show sign for artist 1
       break
 
     case 'artist2':
+      // show sign for artist 2
       break
 
     case 'artist3':
+      // show sign for artist 3
       break
 
     case 'artist4':
@@ -163,19 +167,6 @@ export function runAction(action: string) {
       break
   }
 }
-
-//let currentAnim = 1
-
-// const input = Input.instance
-
-// input.subscribe('BUTTON_DOWN', ActionButton.PRIMARY, false, (e) => {
-//   //step to next ID
-//   currentAnim += 1
-
-//   log('Playing Anim L' + (currentAnim - 1))
-
-//   runAction('state'.concat(currentAnim.toString()))
-// })
 
 //// RANDOMIZER
 

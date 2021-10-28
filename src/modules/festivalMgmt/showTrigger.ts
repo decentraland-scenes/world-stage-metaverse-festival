@@ -1,4 +1,4 @@
-import { showType, subtitlesList } from 'src/showMetadata'
+import { showType } from 'src/showMetadata'
 import { runAction } from '../festivalMgmt/manageShow'
 import { NodeCue, SubtitleSystem } from '../subtitle/SubtitleSystem'
 import { VideoSystem } from '../festivalMgmt/VideoSystem'
@@ -17,6 +17,10 @@ const DEFAULT_VIDEO =
 //   'https://player.vimeo.com/external/637033978.m3u8?s=7e6e280df61ad3555a0d1602e848645d7c1c9886'
 //'https://player.vimeo.com/external/637034879.m3u8?s=f2942a5495877f44fd6f30e7f82479efa5f33b37'
 //'https://player.vimeo.com/external/552481870.m3u8?s=c312c8533f97e808fccc92b0510b085c8122a875'
+
+let PLAYING_DEFAULT: boolean = false
+
+let currentlyPlaying: number | null
 
 export class CustomSubtitleSystem extends SubtitleSystem {
   constructor(text: string) {
@@ -75,6 +79,9 @@ export let mySubtitleSystem: CustomSubtitleSystem
 //// key functions
 
 export function startShow(showData: showType, artistId: number) {
+  if (currentlyPlaying && currentlyPlaying == artistId) return
+  currentlyPlaying = artistId
+
   let currentTime = Date.now() / 1000
 
   let startTime = showData.startTime
@@ -157,7 +164,7 @@ export function playVideo(
   myVideoSystem = new CustomVideoSystem(myVideoTexture)
   engine.addSystem(myVideoSystem)
 
-  mySubtitleSystem = new CustomSubtitleSystem(subtitlesList[artistId])
+  mySubtitleSystem = new CustomSubtitleSystem(show.subs)
   mySubtitleSystem.setOffset(offsetSeconds * 1000)
   engine.addSystem(mySubtitleSystem)
 
@@ -168,8 +175,6 @@ export function playVideo(
   runAction(artistSignAnimation)
   setArtistName(show.artist)
 }
-
-let PLAYING_DEFAULT: boolean = false
 
 export function playDefaultVideo(runOfShow?: showType[]) {
   if (PLAYING_DEFAULT) {
@@ -197,13 +202,6 @@ export function playDefaultVideo(runOfShow?: showType[]) {
 ///// DEBUG  REMOVE!!!
 
 //startShow(shows['test'])
-
-const input = Input.instance
-
-input.subscribe('BUTTON_DOWN', ActionButton.PRIMARY, false, (e) => {
-  log('POS: ', Camera.instance.feetPosition)
-  runAction('state5')
-})
 
 // /////// REMOVE ////////
 // // DEBUG PANEL  (to remove!)

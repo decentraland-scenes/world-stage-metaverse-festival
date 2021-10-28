@@ -3,22 +3,16 @@ import * as ui from '@dcl/ui-scene-utils'
 import { STAGE_ID } from './manageShow'
 import { playDefaultVideo, startShow, stopShow } from './showTrigger'
 
+//// This file relies on a server being available to query for event data
+
 export let data: any
 
 let PING_INTERVAL = 5000
 
 let firstPing: boolean = true
 
-let serverInterval = new Entity()
-engine.addEntity(serverInterval)
-serverInterval.addComponent(
-  new utils.Interval(PING_INTERVAL, () => {
-    pingServer()
-  })
-)
-
 export async function pingServer() {
-  if (playerFar) return
+  //   if (playerFar) return
   let result = await fetch(
     'https://dclteam.s3.us-west-1.amazonaws.com/festival.json?v=' +
       Date.now() / 1000
@@ -198,36 +192,43 @@ function checkNewMessage(res: any) {
   } else {
     log('NONE OF THE CONDITIONS WERE MET ', stage, ' DATA: ', data)
   }
-
-  //TODO
-  // if server fails, resort to hardcoded metadata??
 }
 
-pingServer()
+// TO ACTIVATE THE USE OF THE SERVER, UNCOMMENT THE SECTIONS BELOW
 
-export let playerFar: boolean = true
+// pingServer()
 
-let showTrigger = new Entity()
-showTrigger.addComponent(
-  new Transform({
-    position: new Vector3(32, 0, 32),
-  })
-)
-engine.addEntity(showTrigger)
+// let serverInterval = new Entity()
+// engine.addEntity(serverInterval)
+// serverInterval.addComponent(
+//   new utils.Interval(PING_INTERVAL, () => {
+//     pingServer()
+//   })
+// )
 
-showTrigger.addComponent(
-  new utils.TriggerComponent(
-    new utils.TriggerBoxShape(new Vector3(78, 78, 78)),
-    {
-      onCameraEnter: () => {
-        playerFar = false
-        pingServer()
-      },
-      onCameraExit: () => {
-        playerFar = true
-        data.stages[STAGE_ID].live = false
-        stopShow()
-      },
-    }
-  )
-)
+// export let playerFar: boolean = true
+
+// let showTrigger = new Entity()
+// showTrigger.addComponent(
+//   new Transform({
+//     position: new Vector3(32, 0, 32),
+//   })
+// )
+// engine.addEntity(showTrigger)
+
+// showTrigger.addComponent(
+//   new utils.TriggerComponent(
+//     new utils.TriggerBoxShape(new Vector3(78, 78, 78)),
+//     {
+//       onCameraEnter: () => {
+//         playerFar = false
+//         pingServer()
+//       },
+//       onCameraExit: () => {
+//         playerFar = true
+//         data.stages[STAGE_ID].live = false
+//         stopShow()
+//       },
+//     }
+//   )
+// )

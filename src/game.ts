@@ -1,5 +1,12 @@
 import { Poap } from './imports/index'
 
+// engine.rootEntity.addComponentOrReplace(
+//   new Transform({
+//     rotation: Quaternion.Euler(0, 90, 0),
+//     position: new Vector3(0, 10, 0),
+//   })
+// )
+
 var entity16006 = new Entity('Main Camera')
 engine.addEntity(entity16006)
 entity16006.addComponent(new Transform({ position: new Vector3(0, 1, -10) }))
@@ -298,3 +305,9 @@ entity16576.getComponent(Transform).scale.set(0.01, 0.01, 0.01)
 entity16576.addComponent(new GLTFShape('unity_assets/entity16576.gltf'))
 entity16576.getComponent(GLTFShape).withCollisions = false
 entity16576.getComponent(Transform).rotation.set(0, 1, 0, -4.371139e-8)
+
+const input = Input.instance
+
+input.subscribe('BUTTON_DOWN', ActionButton.PRIMARY, false, (e) => {
+  log('POS: ', Camera.instance.feetPosition)
+})

@@ -1,5 +1,7 @@
 import * as utils from '@dcl/ecs-scene-utils'
 
+// An abstraction to easily run animations or show/hie entities w just one line
+
 export class Synced extends Entity {
   events: (() => void)[]
   endPosition: TransformConstructorArgs

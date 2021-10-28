@@ -7,7 +7,6 @@ import {
   SecondaryStage,
   SpotLights,
 } from './animatedEntities'
-import { setArtistName } from './nextShowCounter'
 
 // Default beats per minute of show
 export let BPM = 120

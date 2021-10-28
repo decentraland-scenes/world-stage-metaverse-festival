@@ -1,12 +1,3 @@
-import { Poap } from './imports/index'
-
-// engine.rootEntity.addComponentOrReplace(
-//   new Transform({
-//     rotation: Quaternion.Euler(0, 90, 0),
-//     position: new Vector3(0, 10, 0),
-//   })
-// )
-
 var entity16006 = new Entity('Main Camera')
 engine.addEntity(entity16006)
 entity16006.addComponent(new Transform({ position: new Vector3(0, 1, -10) }))
@@ -193,17 +184,7 @@ entity16020.getComponent(Transform).scale.set(1, 1, 1)
 entity16020.addComponent(new GLTFShape('unity_assets/entity16020.gltf'))
 entity16020.getComponent(GLTFShape).withCollisions = false
 entity16020.getComponent(Transform).rotation.set(0, 1, 0, -4.371139e-8)
-var entity15412 = new Entity('PoapMachine_Art')
-entity15412.setParent(entity15444)
-entity15412.addComponent(
-  new Transform({ position: new Vector3(0.946, 12.26, 43.632) })
-)
-entity15412.getComponent(Transform).rotation.set(0, 0.5875719, 0, 0.809172)
-entity15412.getComponent(Transform).scale.set(1, 1, 1)
-entity15412.addComponent(new GLTFShape('unity_assets/entity15412.gltf'))
-entity15412.getComponent(GLTFShape).withCollisions = false
-entity15412.getComponent(Transform).rotation.set(0, 0.809172, 0, -0.5875719)
-entity15412.addComponent(new Poap(entity15412, '11548', false, null))
+
 var entity16228 = new Entity('Palm')
 entity16228.setParent(entity15444)
 entity16228.addComponent(
@@ -306,8 +287,6 @@ entity16576.addComponent(new GLTFShape('unity_assets/entity16576.gltf'))
 entity16576.getComponent(GLTFShape).withCollisions = false
 entity16576.getComponent(Transform).rotation.set(0, 1, 0, -4.371139e-8)
 
-const input = Input.instance
-
-input.subscribe('BUTTON_DOWN', ActionButton.PRIMARY, false, (e) => {
-  log('POS: ', Camera.instance.feetPosition)
-})
+// Input.instance.subscribe('BUTTON_DOWN', ActionButton.PRIMARY, false, (e) => {
+//   log('POS: ', Camera.instance.feetPosition)
+// })

@@ -95,7 +95,7 @@ function checkNewMessage(res: any) {
       data.stages[STAGE_ID].artistId = stage.artistId
       data.stages[STAGE_ID].runOfShow[data.stages[STAGE_ID].artistId] =
         stage.runOfShow[stage.artistId]
-      startShow(stage.runOfShow[stage.artistId], stage.artistId)
+      startShow(stage.runOfShow[stage.artistId])
     }
   } else if (
     data &&
@@ -118,7 +118,7 @@ function checkNewMessage(res: any) {
     data.stages[STAGE_ID].runOfShow[data.stages[STAGE_ID].artistId] =
       stage.runOfShow[stage.artistId]
 
-    startShow(stage.runOfShow[stage.artistId], stage.artistId)
+    startShow(stage.runOfShow[stage.artistId])
   } else if (
     (stage && data && data.stages[STAGE_ID].live && !stage.live) ||
     stage.artistId === -1 ||
@@ -188,7 +188,7 @@ function checkNewMessage(res: any) {
       ' seconds'
     )
 
-    startShow(stage.runOfShow[stage.artistId], stage.artistId)
+    startShow(stage.runOfShow[stage.artistId])
   } else {
     log('NONE OF THE CONDITIONS WERE MET ', stage, ' DATA: ', data)
   }

@@ -1,4 +1,4 @@
-export const MorskySubs = `
+export const MorskiSubs = `
 
 
 2

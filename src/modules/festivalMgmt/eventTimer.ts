@@ -1,6 +1,11 @@
 import * as utils from '@dcl/ecs-scene-utils'
 import { shows, showType } from 'src/showMetadata'
-import { playDefaultVideo, startShow, stopShow } from './showTrigger'
+import {
+  currentlyPlaying,
+  playDefaultVideo,
+  startShow,
+  stopShow,
+} from './showTrigger'
 
 let PING_INTERVAL = 5000
 
@@ -28,8 +33,18 @@ export async function checkTime() {
     }
 
     if (showPlaying) {
-      log('playing show ', showPlaying.artist)
-      startShow(showPlaying, artistId)
+      if (!currentlyPlaying === null && currentlyPlaying === showPlaying.id)
+        return
+
+      log(
+        'playing show ',
+        showPlaying.artist,
+        ' id:',
+        showPlaying.id,
+        ' was previously playing : ',
+        currentlyPlaying
+      )
+      startShow(showPlaying)
     } else {
       log('No show playing now')
       playDefaultVideo(shows)

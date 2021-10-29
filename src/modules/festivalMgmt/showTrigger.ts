@@ -1,4 +1,4 @@
-import { showType } from 'src/showMetadata'
+import { DEFAULT_VIDEO, showType } from 'src/showMetadata'
 import { runAction } from '../festivalMgmt/manageShow'
 import { NodeCue, SubtitleSystem } from '../subtitle/SubtitleSystem'
 import { VideoSystem } from '../festivalMgmt/VideoSystem'
@@ -12,15 +12,9 @@ import {
 
 import { videoMat } from '../videoScreens'
 
-const DEFAULT_VIDEO =
-  'https://player.vimeo.com/external/637531989.m3u8?s=0a75c635933b3588464fcbee094839bf08f9c252'
-//   'https://player.vimeo.com/external/637033978.m3u8?s=7e6e280df61ad3555a0d1602e848645d7c1c9886'
-//'https://player.vimeo.com/external/637034879.m3u8?s=f2942a5495877f44fd6f30e7f82479efa5f33b37'
-//'https://player.vimeo.com/external/552481870.m3u8?s=c312c8533f97e808fccc92b0510b085c8122a875'
+export let PLAYING_DEFAULT: boolean = false
 
-let PLAYING_DEFAULT: boolean = false
-
-let currentlyPlaying: number | null
+export let currentlyPlaying: number | null
 
 export class CustomSubtitleSystem extends SubtitleSystem {
   constructor(text: string) {
@@ -78,9 +72,10 @@ export let mySubtitleSystem: CustomSubtitleSystem
 
 //// key functions
 
-export function startShow(showData: showType, artistId: number) {
-  if (currentlyPlaying && currentlyPlaying == artistId) return
-  currentlyPlaying = artistId
+export function startShow(showData: showType) {
+  if (currentlyPlaying && currentlyPlaying === showData.id) return
+
+  currentlyPlaying = showData.id
 
   let currentTime = Date.now() / 1000
 
@@ -89,7 +84,7 @@ export function startShow(showData: showType, artistId: number) {
 
   log(
     'show started for ',
-    artistId,
+    showData.id,
     ' ',
     timeDiff,
     ' seconds ago, show playing: ',
@@ -110,15 +105,10 @@ export function startShow(showData: showType, artistId: number) {
   if (timeDiff >= showData.length * 60) {
     log('show ended')
     return
-  } else if (startTime > currentTime) {
-    utils.setTimeout((startTime - currentTime) * 1000, () => {
-      playVideo(showData, artistId, 0)
-    })
-    log('show will start in ', startTime - currentTime)
   } else {
     log('starting show, ', timeDiff, ' seconds late')
 
-    playVideo(showData, artistId, timeDiff)
+    playVideo(showData, timeDiff)
   }
 }
 
@@ -137,20 +127,20 @@ export function stopShow() {
     engine.removeSystem(mySubtitleSystem)
   }
 
+  currentlyPlaying = null
+
   PLAYING_DEFAULT = false
   hideArtistName()
 }
 
-export function playVideo(
-  show: showType,
-  artistId: number,
-  offsetSeconds: number
-) {
-  log('Starting show ', show)
+export function playVideo(showData: showType, offsetSeconds: number) {
+  log('Starting show ', showData)
 
   stopShow()
 
-  const myVideoClip = new VideoClip(show.link)
+  currentlyPlaying = showData.id
+
+  const myVideoClip = new VideoClip(showData.link)
   const myVideoTexture = new VideoTexture(myVideoClip)
 
   hideBoard()
@@ -164,16 +154,16 @@ export function playVideo(
   myVideoSystem = new CustomVideoSystem(myVideoTexture)
   engine.addSystem(myVideoSystem)
 
-  mySubtitleSystem = new CustomSubtitleSystem(show.subs)
+  mySubtitleSystem = new CustomSubtitleSystem(showData.subs)
   mySubtitleSystem.setOffset(offsetSeconds * 1000)
   engine.addSystem(mySubtitleSystem)
 
-  let artistSignAnimation = 'artist' + (artistId + 1)
+  let artistSignAnimation = 'artist' + (showData.id + 1)
 
   log('ARTIST NAME', artistSignAnimation)
 
   runAction(artistSignAnimation)
-  setArtistName(show.artist)
+  setArtistName(showData.artist)
 }
 
 export function playDefaultVideo(runOfShow?: showType[]) {
@@ -183,6 +173,7 @@ export function playDefaultVideo(runOfShow?: showType[]) {
 
   stopShow()
   PLAYING_DEFAULT = true
+  currentlyPlaying = null
 
   const myVideoClip = new VideoClip(DEFAULT_VIDEO)
   const myVideoTexture = new VideoTexture(myVideoClip)

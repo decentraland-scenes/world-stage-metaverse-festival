@@ -2,15 +2,13 @@ import { RenuSubs } from './subtitle-files/renuSubs'
 import { TurbansSubs } from './subtitle-files/theTurbansBPM'
 import { MorskiSubs } from './subtitle-files/morskiSubs'
 
-export type showType = {
-  id: number
-  link: string
-  subs?: string
-  startTime?: number
-  length?: number
-  artist: string
-}
+// Video to display as background while no show is playing
+export const DEFAULT_VIDEO =
+  'https://player.vimeo.com/external/637531989.m3u8?s=0a75c635933b3588464fcbee094839bf08f9c252'
+// alternative video to loop:
+//'https://player.vimeo.com/external/552481870.m3u8?s=c312c8533f97e808fccc92b0510b085c8122a875'
 
+// Video schedule
 export const shows: showType[] = [
   {
     id: 1,
@@ -38,14 +36,18 @@ export const shows: showType[] = [
   },
 ]
 
-// Video to display as background while no show is playing
-export const DEFAULT_VIDEO =
-  'https://player.vimeo.com/external/637531989.m3u8?s=0a75c635933b3588464fcbee094839bf08f9c252'
-//'https://player.vimeo.com/external/552481870.m3u8?s=c312c8533f97e808fccc92b0510b085c8122a875'
-
 // TIP
 // use this website to obtain the unix time
 // https://www.epochconverter.com/
 
 // Test the whole run of the show by setting the duration of each to something short like 30 seconds
 // Then set the starting times appart by something like 100 seconds
+
+export type showType = {
+  id: number
+  link: string
+  subs?: string
+  startTime?: number
+  length?: number
+  artist: string
+}
